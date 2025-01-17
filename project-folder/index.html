@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful 3D Model Viewer</title>
+    <!-- Подключение библиотеки model-viewer -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #e8f0ff, #c3dafb);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+        }
+        model-viewer {
+            border: 5px solid #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Explore Your 3D Model</h1>
+    <!-- Вставка модели с поддержкой AR -->
+    <model-viewer 
+        src="model.glb" 
+        alt="Beautiful 3D Model" 
+        auto-rotate 
+        camera-controls 
+        environment-image="neutral" 
+        shadow-intensity="1" 
+        ar 
+        ar-modes="webxr scene-viewer quick-look" 
+        style="width: 80%; height: 60vh;">
+    </model-viewer>
+</body>
+</html>
